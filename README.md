@@ -20,16 +20,15 @@ Each symbol is defined as a crc32 of the function contents, the length in bytes 
 function, the SDK release version, library name, and symbol name. If a match is found,
 the function is renamed to the symbol name. This is useful for understanding what
 SDK functions are being called.
-  - Note, the current SDK symbols are for the GNU libraries included from R9, R10.1, and R11.
-  - SDK Symbols for functions <30 bytes are not renamed as the smaller a function is, the
-    more likely it is to be a common pattern/ambiguous.
+    - Note, the current SDK symbols are for the GNU libraries included from R9, R10.1, and R11.
+    - SDK Symbols for functions <30 bytes are not renamed as the smaller a function is, the more likely it is to be a common pattern/ambiguous.
 
 # Usage
 1. Open Ghidra and load a 16 MiB ram binary as superh little-endian to 8c000000.
 2. Open the program and let auto-analysis run.
 3. Run this script in the script manager. You can modify an existing script or create
    a new java-based script from the manager and copy-paste this there. 
-   - Note that currently the script expects the SDK symbols file to be copied to `/tmp/sdk-symbols.txt`.
+    - Note that currently the script expects the SDK symbols file to be copied to `/tmp/sdk-symbols.txt`.
 
 # TODO:
 1. Name SDK symbols by their plane name instead of the "fully-qualified" names.
